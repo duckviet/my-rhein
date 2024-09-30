@@ -1,0 +1,49 @@
+:root {
+  --config-font: "Fira Code Retina", "Input Mono";
+  --config-size: 14px;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  filter: saturate(0.5);
+  background: white;
+}
+img {
+  filter: none; /* Ensure images retain their colors */
+}
+html,
+.CodeMirror {
+  font-family: var(--config-font), monospace;
+  font-size: var(--config-size);
+}
+
+/* Dark */
+html.dark {
+  background: black;
+}
+.dark #editor > .CodeMirror {
+  filter: invert(1);
+}
+
+#page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#editor {
+  height: 100%;
+  z-index: 1;
+}
+
+#images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
